@@ -8,6 +8,7 @@ var app;
                 { name: 'Chips', quantity: 11 },
                 { name: 'Coke', quantity: 12 },
                 { name: 'Beer', quantity: 13 },
+                { name: 'Apple', quantity: 14 },
             ];
             this._bought = [];
         }
