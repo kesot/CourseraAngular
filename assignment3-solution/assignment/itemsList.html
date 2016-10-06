@@ -1,0 +1,7 @@
+﻿<ol>
+    <li ng-repeat="item in items">
+        {{ item.quantity }} of {{ item.name }}
+        <!-- <button ng-click="list.removeItem($index);">Remove Item</button> -->
+    </li>
+</ol>
+<div class="error" ng-if="list.cookiesInList()">WARNING! WARNING! COOKIES DETECTED!</div>
