@@ -2,13 +2,13 @@ var FoundItemsDirective = (function () {
     function FoundItemsDirective() {
         this.templateUrl = 'itemsList.html';
         this.scope = {
-            'items': '<',
-            'myTitle': '@title',
-            'onRemove': '&'
+            'items': "<"
         };
     }
-    FoundItemsDirective.prototype.factory = function () {
-        return function () { return new FoundItemsDirective(); };
+    FoundItemsDirective.factory = function () {
+        return function () {
+            return new FoundItemsDirective();
+        };
     };
     return FoundItemsDirective;
 }());

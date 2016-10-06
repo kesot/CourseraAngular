@@ -2,8 +2,9 @@
     "use strict";
 
     var appModule = angular.module("NarrowItDownApp", []);
-    appModule
-        .service('MenuSearchService', MenuSearchService)
-        .controller("NarrowItDownController", NarrowItDownController)
-        .constant('BaseUrl', "https://davids-restaurant.herokuapp.com");
+	appModule
+		.service('MenuSearchService', MenuSearchService)
+		.controller("NarrowItDownController", NarrowItDownController)
+		.constant('BaseUrl', "https://davids-restaurant.herokuapp.com")
+		.directive('foundItems', FoundItemsDirective.factory());
 }
