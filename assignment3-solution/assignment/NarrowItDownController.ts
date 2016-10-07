@@ -13,5 +13,11 @@
             var promise = this.menuSearchService.getMatchedMenuItems(this.searchTerm);
             promise.then(result => this.foundItems = result);
         }
+
+        public removeItem(index: number): void {
+            this.foundItems.splice(index, 1);
+        }
+
+
     }
 }

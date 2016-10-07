@@ -1,8 +1,8 @@
 ﻿<div class="form-group">
-	<ol>
-		<li ng-repeat="item in items">
-			{{item.name}} ({{item.short_name}})
-			<!-- <button ng-click="list.removeItem($index);">Remove Item</button> -->
-		</li>
-	</ol>
+    <ol>
+        <li ng-repeat="item in items">
+            {{item.name}} ({{item.short_name}})
+            <button ng-click="onRemove({index: $index});">Don't want this one!</button>
+        </li>
+    </ol>
 </div>

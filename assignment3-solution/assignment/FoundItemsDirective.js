@@ -2,7 +2,8 @@ var FoundItemsDirective = (function () {
     function FoundItemsDirective() {
         this.templateUrl = 'itemsList.html';
         this.scope = {
-            'items': "<"
+            items: "<",
+            onRemove: "&"
         };
     }
     FoundItemsDirective.factory = function () {

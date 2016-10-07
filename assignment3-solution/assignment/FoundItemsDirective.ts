@@ -1,13 +1,14 @@
 ﻿class FoundItemsDirective implements ng.IDirective {
     templateUrl: string = 'itemsList.html';
-	restrict: 'AE';
+    restrict: 'AE';
     scope: { [boundProperty: string]: string } = {
-        'items': "<"
+        items: "<",
+        onRemove: "&"
     };
-   
+
     static factory(): ng.IDirectiveFactory {
         return () => {
-	        return new FoundItemsDirective();
+            return new FoundItemsDirective();
         };
     }
 }
