@@ -22,35 +22,32 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.js" />
-    <Content Include="FoundItemsDirective.js" />
-    <Content Include="IMenuItem.js" />
-    <Content Include="IMenuItemsResponse.js" />
     <Content Include="index.html" />
     <Content Include="itemsList.html" />
-    <Content Include="MenuSearchService.js" />
-    <Content Include="NarrowItDownController.js" />
+    <Content Include="Ng-Views\Categories.html" />
+    <Content Include="Ng-Views\Home.html" />
     <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-ui-router.js" />
+    <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
-    <Content Include="app.js.map" />
-    <Content Include="FoundItemsDirective.js.map" />
-    <Content Include="IMenuItem.js.map" />
-    <Content Include="IMenuItemsResponse.js.map" />
-    <Content Include="MenuSearchService.js.map" />
-    <Content Include="NarrowItDownController.js.map" />
-    <None Include="Scripts\_references.js" />
     <Content Include="styles\bootstrap.min.css" />
     <Content Include="styles\styles.css" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\CategoriesComponent.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\data.module.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\ICategory.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\MenudataService.ts" />
+    <TypeScriptCompile Include="Scripts\src\menuapp\menuapp.module.ts" />
     <TypeScriptCompile Include="FoundItemsDirective.ts" />
-    <TypeScriptCompile Include="IMenuItem.ts" />
-    <TypeScriptCompile Include="IMenuItemsResponse.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\IMenuItem.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\IMenuItemsResponse.ts" />
     <TypeScriptCompile Include="MenuSearchService.ts" />
     <TypeScriptCompile Include="NarrowItDownController.ts" />
+    <TypeScriptCompile Include="Scripts\src\menuapp\RoutesConfig.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angular-ui-router\angular-ui-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />

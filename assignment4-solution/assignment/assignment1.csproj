@@ -22,24 +22,11 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.js" />
-    <Content Include="FoundItemsDirective.js" />
-    <Content Include="IMenuItem.js" />
-    <Content Include="IMenuItemsResponse.js" />
     <Content Include="index.html" />
     <Content Include="itemsList.html" />
-    <Content Include="MenuSearchService.js" />
-    <Content Include="NarrowItDownController.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
-    <Content Include="app.js.map" />
-    <Content Include="FoundItemsDirective.js.map" />
-    <Content Include="IMenuItem.js.map" />
-    <Content Include="IMenuItemsResponse.js.map" />
-    <Content Include="MenuSearchService.js.map" />
-    <Content Include="NarrowItDownController.js.map" />
-    <None Include="Scripts\_references.js" />
     <Content Include="styles\bootstrap.min.css" />
     <Content Include="styles\styles.css" />
     <Content Include="web.config" />
