@@ -24,7 +24,13 @@
   <ItemGroup>
     <Content Include="index.html" />
     <Content Include="itemsList.html" />
+    <Content Include="Ng-Views\Items.html" />
+    <Content Include="Ng-Views\Categories.html" />
+    <Content Include="Ng-Views\Home.html" />
+    <Content Include="Ng-Views\MainCategories.html" />
     <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-ui-router.js" />
+    <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="styles\bootstrap.min.css" />
@@ -32,12 +38,20 @@
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\CategoriesComponent.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\ItemsController.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\CategoriesController.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\data.module.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\ICategory.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\MenuDataService.ts" />
+    <TypeScriptCompile Include="Scripts\src\menuapp\menuapp.module.ts" />
     <TypeScriptCompile Include="FoundItemsDirective.ts" />
-    <TypeScriptCompile Include="IMenuItem.ts" />
-    <TypeScriptCompile Include="IMenuItemsResponse.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\IMenuItem.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\IMenuItemsResponse.ts" />
     <TypeScriptCompile Include="MenuSearchService.ts" />
     <TypeScriptCompile Include="NarrowItDownController.ts" />
+    <TypeScriptCompile Include="Scripts\src\menuapp\RoutesConfig.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angular-ui-router\angular-ui-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />

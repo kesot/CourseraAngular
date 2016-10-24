@@ -1,32 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Narrow Down Your Menu Choice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="Scripts/angular.min.js"></script>
-	<script src="FoundItemsDirective.js"></script>
-    <script src="MenuSearchService.js"></script>
-    <script src="NarrowItDownController.js"></script>
-    <script src="app.js"></script>
+    <script src="Scripts/angular-ui-router.js"></script>
+    
+    <script src="Scripts/src/data/MenuDataService.js"></script>
+    <script src="Scripts/src/data/CategoriesController.js"></script>
+    <script src="Scripts/src/data/CategoriesComponent.js"></script>
+    <script src="Scripts/src/data/ItemsController.js"></script>
+    <script src="Scripts/src/data/data.module.js"></script>
+    
+    <script src="Scripts/src/menuapp/RoutesConfig.js"></script>
+    <script src="Scripts/src/menuapp/menuapp.module.js"></script>
 </head>
-<body ng-app="NarrowItDownApp">
-    <div class="container" ng-controller="NarrowItDownController as ctrl">
-        <h1>Narrow Down Your Chinese Menu Choice</h1>
-		<div class="row">
-			<div class="form-group">
-				<input type="text" placeholder="search term" class="form-control" ng-model="ctrl.searchTerm">
-			
-			
-				<button class="btn btn-primary  narrow-button" ng-click="ctrl.searchForItem()">Narrow It Down For Me!</button>
-			</div>
-		</div>
-        <!-- Bonus loader (see Bonus section of the assignment) -->
-        <div ng-if="ctrl.showNotFoundMessage">Nothing is found</div>
-        <!-- found-items should be implemented as a component -->
-        <div found-items items="ctrl.foundItems" on-remove="ctrl.removeItem(index)"></div>
-    </div>
-
+<body ng-app="MenuApp">
+    <h2>Categories</h2>
+    <ui-view></ui-view>
 </body>
 </html>
