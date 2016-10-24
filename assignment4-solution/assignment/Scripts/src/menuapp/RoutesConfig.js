@@ -6,7 +6,7 @@ var RoutesConfig = (function () {
         $stateProvider
             .state('home', {
             url: '/',
-            templateUrl: 'ng-views/home.html'
+            templateUrl: 'Ng-Views/home.html'
         })
             .state('categories', {
             url: '/categories',
