@@ -7,32 +7,40 @@
 
         $urlRouterProvider.otherwise("/");
 
-        // Home page
         $stateProvider
-            .state('home', {
+            .state('home',
+            {
                 url: '/',
                 templateUrl: 'ng-views/home.html'
             })
-
-            // Premade list page
-            .state('categories', {
+            .state('categories',
+            {
                 url: '/categories',
-                templateUrl: 'ng-views/categories.html',
-                controller: 'MainShoppingListController as mainList',
+                templateUrl: 'ng-views/MainCategories.html',
+                controller: 'CategoriesController as categoriesCtrl',
                 resolve: {
-                    items: ['ShoppingListService', function (ShoppingListService) {
-                        return ShoppingListService.getItems();
-                    }]
+                    categories: [
+                        'MenuDataService',
+                        (menuDataService: MenuDataService) => {
+                            return menuDataService.getAllCategories();
+                        }
+                    ]
                 }
             })
 
-            // Item detail
-            .state('mainList.itemDetail', {
-                // url: '/item-detail/{itemId}',
-                templateUrl: 'src/shoppinglist/templates/item-detail.template.html',
-                controller: 'ItemDetailController as itemDetail',
-                params: {
-                    itemId: null
+            .state('categories.items', {
+                url: '/{categoryShortName}/items',
+                templateUrl: 'ng-views/Items.html',
+                controller: data.ItemsController.Name,
+                controllerAs: '$ctrl',
+                resolve: {
+                    items: [
+                        'MenuDataService',
+                        '$stateParams',
+                        (menuDataService: MenuDataService, $stateParams : angular.ui.IStateParamsService) => {
+                            return menuDataService.getItemsForCategory($stateParams['categoryShortName']);
+                        }
+                    ]
                 }
             });
     }

@@ -24,8 +24,10 @@
   <ItemGroup>
     <Content Include="index.html" />
     <Content Include="itemsList.html" />
+    <Content Include="Ng-Views\Items.html" />
     <Content Include="Ng-Views\Categories.html" />
     <Content Include="Ng-Views\Home.html" />
+    <Content Include="Ng-Views\MainCategories.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui-router.min.js" />
@@ -37,9 +39,11 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\src\data\CategoriesComponent.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\ItemsController.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\CategoriesController.ts" />
     <TypeScriptCompile Include="Scripts\src\data\data.module.ts" />
     <TypeScriptCompile Include="Scripts\src\data\ICategory.ts" />
-    <TypeScriptCompile Include="Scripts\src\data\MenudataService.ts" />
+    <TypeScriptCompile Include="Scripts\src\data\MenuDataService.ts" />
     <TypeScriptCompile Include="Scripts\src\menuapp\menuapp.module.ts" />
     <TypeScriptCompile Include="FoundItemsDirective.ts" />
     <TypeScriptCompile Include="Scripts\src\data\IMenuItem.ts" />

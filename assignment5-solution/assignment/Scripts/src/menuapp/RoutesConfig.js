@@ -3,7 +3,6 @@ var RoutesConfig = (function () {
         this.$stateProvider = $stateProvider;
         this.$urlRouterProvider = $urlRouterProvider;
         $urlRouterProvider.otherwise("/");
-        // Home page
         $stateProvider
             .state('home', {
             url: '/',
@@ -11,20 +10,30 @@ var RoutesConfig = (function () {
         })
             .state('categories', {
             url: '/categories',
-            templateUrl: 'ng-views/categories.html',
-            controller: 'MainShoppingListController as mainList',
+            templateUrl: 'ng-views/MainCategories.html',
+            controller: 'CategoriesController as categoriesCtrl',
             resolve: {
-                items: ['ShoppingListService', function (ShoppingListService) {
-                        return ShoppingListService.getItems();
-                    }]
+                categories: [
+                    'MenuDataService',
+                    function (menuDataService) {
+                        return menuDataService.getAllCategories();
+                    }
+                ]
             }
         })
-            .state('mainList.itemDetail', {
-            // url: '/item-detail/{itemId}',
-            templateUrl: 'src/shoppinglist/templates/item-detail.template.html',
-            controller: 'ItemDetailController as itemDetail',
-            params: {
-                itemId: null
+            .state('categories.items', {
+            url: '/{categoryShortName}/items',
+            templateUrl: 'ng-views/Items.html',
+            controller: data.ItemsController.Name,
+            controllerAs: '$ctrl',
+            resolve: {
+                items: [
+                    'MenuDataService',
+                    '$stateParams',
+                    function (menuDataService, $stateParams) {
+                        return menuDataService.getItemsForCategory($stateParams['categoryShortName']);
+                    }
+                ]
             }
         });
     }

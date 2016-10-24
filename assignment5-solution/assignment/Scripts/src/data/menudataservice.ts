@@ -1,12 +1,15 @@
-﻿class MenudataService {
+﻿class MenuDataService {
     static $inject = ['$http', 'BaseUrl'];
+    static Name = 'MenuDataService';
+
+
     constructor(private $http: ng.IHttpService, private baseUrl: string) { }
 
     public getAllCategories(): ng.IPromise<Array<ICategory>> {
         return this.$http
             .get(this.baseUrl + "/categories.json")
             .then((result: ng.IHttpPromiseCallbackArg<Array<ICategory>>) => {
-                return result;
+                return result.data;
             });
     }
 
