@@ -10,7 +10,7 @@ var RoutesConfig = (function () {
         })
             .state('categories', {
             url: '/categories',
-            templateUrl: 'ng-views/MainCategories.html',
+            templateUrl: 'Ng-Views/MainCategories.html',
             controller: 'CategoriesController as categoriesCtrl',
             resolve: {
                 categories: [
@@ -23,7 +23,7 @@ var RoutesConfig = (function () {
         })
             .state('categories.items', {
             url: '/{categoryShortName}/items',
-            templateUrl: 'ng-views/Items.html',
+            templateUrl: 'Ng-Views/Items.html',
             controller: data.ItemsController.Name,
             controllerAs: '$ctrl',
             resolve: {
