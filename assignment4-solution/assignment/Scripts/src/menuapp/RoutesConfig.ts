@@ -11,7 +11,7 @@
             .state('home',
             {
                 url: '/',
-                templateUrl: 'Ng-Views/home.html'
+                templateUrl: 'Ng-Views/Home.html'
             })
             .state('categories',
             {
