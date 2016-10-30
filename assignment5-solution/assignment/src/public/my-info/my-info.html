@@ -1,0 +1,19 @@
+<div ng-if="myInfoCtrl.user">
+    <div class="form-group">
+        <label>Email address: {{myInfoCtrl.user.email}}</label>
+    </div>
+    <div class="form-group">
+        <label>Name: {{myInfoCtrl.user.name}}</label>
+    </div>
+    <div class="form-group">
+        <label>Surname: {{myInfoCtrl.user.surname}}</label>
+    </div>
+    <div class="form-group">
+        <label>Phone: {{myInfoCtrl.user.phone}}</label>
+    </div>
+    <div class="form-group">
+        <label>Favourite dish: {{myInfoCtrl.user.favouriteDish}}</label>
+    </div>
+</div>
+<menu-item menu-item="myInfoCtrl.menuItem"></menu-item>
+<div ng-if="!myInfoCtrl.user"><a ui-sref="public.signup">Sign Up</a> Now!</div>

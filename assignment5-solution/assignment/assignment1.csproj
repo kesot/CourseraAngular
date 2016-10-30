@@ -56,6 +56,9 @@
     <Content Include="src\common\common.module.js" />
     <Content Include="src\common\loading\loading.component.js" />
     <Content Include="src\common\loading\loading.interceptor.js" />
+    <Content Include="src\public\my-info\my-info.controller.js" />
+    <Content Include="src\public\my-info\my-info.html" />
+    <Content Include="src\public\signUp.service.js" />
     <Content Include="src\common\menu.service.js" />
     <Content Include="src\public\home\home.html" />
     <Content Include="src\public\menu-category\menu-category.component.js" />
