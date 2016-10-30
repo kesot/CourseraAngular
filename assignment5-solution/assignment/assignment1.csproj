@@ -60,6 +60,8 @@
     <Content Include="src\public\home\home.html" />
     <Content Include="src\public\menu-category\menu-category.component.js" />
     <Content Include="src\public\menu-category\menu-category.html" />
+    <Content Include="src\public\sign-up\sign-up.controller.js" />
+    <Content Include="src\public\sign-up\sign-up.html" />
     <Content Include="src\public\menu-items\menu-items.controller.js" />
     <Content Include="src\public\menu-items\menu-items.html" />
     <Content Include="src\public\menu-item\menu-item.component.js" />
