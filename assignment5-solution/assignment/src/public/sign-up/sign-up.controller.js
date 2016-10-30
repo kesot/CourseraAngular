@@ -23,11 +23,7 @@
                     ctrl.success = true;
                 })
                 .catch(function (err) {
-                    signUpService.setUser(ctrl.user);
-                    if (err.status === 404) {
-                        ctrl.errorMessage = "Item not found";
-
-                    }
+                    ctrl.errorMessage = "Item not found";
                     ctrl.success = false;
                 });
         }
